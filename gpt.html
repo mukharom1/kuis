@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+<head>
+  <title>Form Nama + Alert</title>
+</head>
+<header>
+  <style>
+    h1 {
+      font-family: Times New Roman;
+      font-size: 40px;
+      background: yellow;
+    }
+    body {
+      background: turquoise;
+    }
+    h3 {
+      font-family: Times New Roman;
+      font-size: 30px;
+      background: red;
+    }
+  </style>
+</header>
+<body>
+
+  <marquee direction="left" scrollamount="22"><h1>Masukkan Nama:</h1></marquee>
+  <input type="text" id="namaInput" placeholder="MASUKAN NAMA MAU DM GK">
+  <button onclick="simpanNama()">Kirim</button>
+  <br>
+  <br>
+<h2>PERATURAN !</h2>
+<marquee direction="left" scrollamount="12"><h2>MASUKKAN NAMA DULU BRO KALO DAH NANTI ADA LINK BUKA LINK ITU LALU SS KIRIM KE GRUP!</h2></marquee>
+<br>
+<br>
+<br>
+<br>
+<marquee direction="left" scrollamount="5"><h3>S.DIGITALBY.RONZAJA</h3></marquee>
+  <script>
+    const daftarNama = [];
+
+    function simpanNama() {
+      const input = document.getElementById("namaInput");
+      const nama = input.value.trim();
+
+      if (nama) {
+        daftarNama.push(nama); // Simpan ke array
+        alert("\n\n\n\n- SILAHKAN MENUJU LINK INI DAN KIRIM SS AN DI GRUP\n\nSS SETELAH BUKA LINK INI\n- LINK\nhttps://mukharom1.github.io/testi-sdigital\nCARI CARA LAH BUAT BUKA LINK NYA\n\nYANG SUDAH HADIR :\n" + daftarNama.join("\n")); // Tampilkan semua nama
+        input.value = ""; // Kosongkan input
+      } else {
+        alert("ISI NAMA DULU BRO :)");
+      }
+    }
+  </script>
+
+</body>
+</html>
